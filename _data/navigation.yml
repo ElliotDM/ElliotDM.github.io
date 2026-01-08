@@ -11,23 +11,20 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-    
   - title: "Portfolio"
     url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
+
   - title: "CV"
-    url: /cv/
+    url: files/Elliot_Durán_Macedo_CV.pdf
     
   # - title: "CV"
   #   url: /cv-json/
     
-  - title: "Guide"
-    url: /markdown/
+  # - title: "Talks"
+  #   url: /talks/    
+  # - title: "Teaching"
+  #   url: /teaching/    
+  # - title: "Blog Posts"
+  #   url: /year-archive/
+  # - title: "Guide"
+  #   url: /markdown/
