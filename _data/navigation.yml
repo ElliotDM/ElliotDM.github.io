@@ -15,7 +15,7 @@ main:
     url: /portfolio/
 
   - title: "CV"
-    url: files/Elliot_Durán_Macedo_CV.pdf
+    url: /files/Elliot_Durán_Macedo_CV.pdf
     
   # - title: "CV"
   #   url: /cv-json/

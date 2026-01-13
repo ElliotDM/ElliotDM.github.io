@@ -7,12 +7,12 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
+locale                   : "es-ES"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Elliot Durán Macedo"
-description              : &description "Elliot's portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Portafolio personal"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://elliotdm.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -25,9 +25,9 @@ author:
   # Biographic information
   avatar           : "foto_cv.jpeg"
   name             : "Elliot"
-  pronouns         : "he/him"  
-  bio              : "Computer engineer interested in data analysis"
-  location         : "Mexico"
+  pronouns         : # "he/him"  
+  bio              : "Ingeniero en computación con fuerte interés en el análisis de datos"
+  location         : "México, México"
   employer         : # "Red Brick University"
   uri              : # URL
   email            : "elliotd70@outlook.com" 
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "Elliot Duran Macedo"
+  linkedin         : "elliot-durán-macedo-92532a17a"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -83,13 +83,13 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# publication_category:
+#   books:
+#     title: 'Books'
+#   manuscripts:
+#     title: 'Journal Articles'    
+#   conferences:
+#     title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
