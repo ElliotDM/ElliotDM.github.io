@@ -14,7 +14,7 @@ title_separator          : "-"
 name                     : &name "Elliot Durán Macedo"
 description              : &description "Portafolio personal"
 url                      : https://ElliotDM.github.io
-baseurl                  : "/blog"
+baseurl                  : "" # "/blog"
 repository               : "ElliotDM/ElliotDM.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Elliot Durán Macedo"
   pronouns         : # example: "she/her"  
-  bio              : "Ingeniero en computación con gran interés en el análisis de datos y las finanzas"
+  bio              : "Ingeniero en computación"
   location         : "México"
   employer         : # "Red Brick University"
   uri              : # URL
