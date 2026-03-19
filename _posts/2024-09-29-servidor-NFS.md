@@ -1,17 +1,14 @@
 ---
-title: "Servidor NFS"
-excerpt: "Implementación de un servidor NFS empleando una red de contenedores Docker"
+title: 'Implementando un servidor NFS con Docker'
 date: 2024-09-29
-collection: portfolio
-categories:
-  - Linux
-  - Docker
+permalink: /posts/2024/09/servidor-NFS/
 tags:
-  - Redes 
+  - Docker
+  - Linux
+  - Redes TCP/IP
 ---
-## Introducción
 
-*Network File System (NFS)* es un protocolo para sistemas de archivos distribuidos desarrollado por Sun Microsystems en 1984, el cual se basa en el sistema Open Network Computing Remote Procedure Call (ONC RPC).
+**Network File System (NFS)** es un protocolo para sistemas de archivos distribuidos desarrollado por Sun Microsystems en 1984, el cual se basa en el sistema Open Network Computing Remote Procedure Call (ONC RPC).
 
 Se trata de un protocolo que permite a los usuarios cliente acceder y compartir archivos a través de una red de forma similar a cómo se accede de manera local.
 
@@ -25,7 +22,7 @@ Hoy en día, NFS sigue manteniéndose como un protocolo bastante usado principal
 
 ## Servidor
 
-Para la realización de este proyecto se utilizo Ubuntu Server 24.04.4 LTS.
+Para la realización de este proyecto se utilizo **Ubuntu Server 24.04.4 LTS**.
 
 Comenzamos instalando el paquete de NFS.
 
@@ -137,11 +134,3 @@ De tal manera, se configuraron los siguientes contenedores, ambos en la misma re
 ```bash
   sudo docker run -it --ip 10.1.0.20 --network=nfs-network --name nfs_client2 --volume /mnt/nfs_client:/mnt/client2 ubuntu /bin/bash
 ```
-
-## Conclusión
-
-Con la realización de este proyecto me fue posible entender mejor como utilizar Docker en un caso práctico, también aprendí el uso de los volúmenes en Docker para preservar archivos de manera permanente por medio de un servidor NFS.
-
-La única dificultad al momento de realizar el proyecto fue el almacenamiento, por lo que opte en utilizar Ubuntu Server como sistema operativo host al no requerir interfaz gráfica.
-
-En cuanto a como se llegó a la solución presentada, fue necesario revisar varios blogs en internet y videos sobre Docker, con los cuales me fue posible razonar una manera de conectar los contenedores de Docker al servidor NFS.

@@ -26,7 +26,7 @@ author:
   name             : "Elliot Durán Macedo"
   pronouns         : # example: "she/her"  
   bio              : "Ingeniero en computación"
-  location         : "México"
+  location         : # "México"
   employer         : # "Red Brick University"
   uri              : # URL
   email            : "elliotd70@outlook.com" 
@@ -94,7 +94,7 @@ publication_category:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
