@@ -57,10 +57,10 @@ Agregamos la siguiente línea al final del archivo.
 
 Colocamos la ruta del directorio, la subred del servidor y, entre paréntesis, algunos parámetros importantes:
 
-* rw indica que se pueda leer y escribir los archivos contenidos en el directorio,
-* sync garantiza que los cambios realizados en el almacenamiento se encuentren estables antes de responder a una petición,
-* no_subtree_check deshabilita la verificación de seguridad del directorio cuando un cliente montar el directorio y,
-* no_root_squash permite que cualquier archivo en root sea modificado por un usuario root del sistema cliente.
+* `rw` indica que se pueda leer y escribir los archivos contenidos en el directorio,
+* `sync` garantiza que los cambios realizados en el almacenamiento se encuentren estables antes de responder a una petición,
+* `no_subtree_check` deshabilita la verificación de seguridad del directorio cuando un cliente montar el directorio y,
+* `no_root_squash` permite que cualquier archivo en root sea modificado por un usuario root del sistema cliente.
 
 Para confirmar los cambios realizados al archivo tecleamos el siguiente comando.
 
@@ -123,9 +123,9 @@ Para verificar que se creó la subred utilizamos el siguiente comando.
 
 Para poder tener acceso al directorio del servidor la lógica que se uso fue, por medio de volúmenes, vincular cada uno de los contenedores al directorio del cliente. De esta forma todos los contenedores tienen un volumen compartido, el cual pueden editar y los cambios se ven reflejados en el servidor.
 
-![Red de contenedores Docker](/images/ServidorNFS/RedDocker.png)
+![Red de contenedores Docker](/images/Blog/ServidorNFS/RedDocker.png)
 
-De tal manera, se configuraron los siguientes contenedores, ambos en la misma red, pero con diferente IP. En el comando se pasa la bandera --volume que nos permite vincular un directorio como un volumen compartido para todos los contenedores.
+De tal manera, se configuraron los siguientes contenedores, ambos en la misma red, pero con diferente IP. En el comando se pasa la bandera `--volume` que nos permite vincular un directorio como un volumen compartido para todos los contenedores.
 
 ```bash
   sudo docker run -it --ip 10.1.0.10 --network=nfs-network --name nfs_client1 --volume /mnt/nfs_client:/mnt/client1 ubuntu /bin/bash
