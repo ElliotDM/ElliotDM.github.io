@@ -7,3 +7,6 @@ tags:
   - Jupyter Notebook
   - Python
 ---
+
+[UV](https://www.sarahglasmacher.com/how-to-build-python-package-uv/)
+[How to organize your Python data science project](https://gist.github.com/ericmjl/27e50331f24db3e8f957d1fe7bbbe510)
