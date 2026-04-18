@@ -11,8 +11,8 @@ main:
   - title: "Portafolio"
     url: /portfolio/
 
-#  - title: "Notas"
-#    url: /publications/
+  #  - title: "Notas"
+  #    url: /publications/
 
   # - title: "Talks"
   #   url: /talks/   
@@ -20,8 +20,8 @@ main:
   - title: "CV"
     url: /cv/
 
-  - title: "Clases"
-    url: /teaching/    
+  #  - title: "Clases"
+  #    url: /teaching/    
         
   - title: "Blog"
     url: /year-archive/
