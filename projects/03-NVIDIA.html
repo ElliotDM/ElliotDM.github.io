@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | NVIDIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af', // blue-800
+                        secondary: '#475569', // slate-600
+                        dark: '#0f172a', // slate-900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+    <nav class="bg-dark text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 hover:text-blue-400 transition duration-300">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span class="font-semibold">Back to the Portfolio</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="bg-white border-b border-slate-200 py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Python</span>
+                <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Pandas</span>
+                <span
+                    class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">PowerBI</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
+                Design of a Financial Ratios Dashboard for NVIDIA
+            </h1>
+
+            <p class="text-xl text-secondary mb-8 leading-relaxed">
+                I designed and executed an <b>ETL</b> pipeline in Python to extract NVIDIA financial data, transform it for
+                analysis, and visualize key metrics in a PowerBI dashboard.
+            </p>
+
+             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-100">
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Industry</h4>
+                    <p class="font-medium">Finance</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Tools</h4>
+                    <p class="font-medium">PowerBI </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 px-6">
+        <article class="max-w-4xl mx-auto space-y-16">
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">1. Context and Problem Definition</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                    <p>
+                        NVIDIA Corporation is a software and fabless technology company that develops graphics
+                        processing units, application programming interfaces for data science and high-performance
+                        computing, as well as system-on-a-chip solutions for mobile computing and the automotive market.
+                        <br><br>
+
+                        In this project, I will answer the following questions: How is the company performing in terms
+                        of liquidity and profitability? How is its cash conversion cycle? How is the company performing
+                        in terms of its interest coverage ratio? Finally, I will analyze their return on equity (ROE)
+                        using the DuPont Analysis.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">2. Data and Its Preparation</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6">
+                    <p>
+                        The data was obtained from Yahoo Finance, a website that offers a vast amount of finance
+                        data.<br><br>
+
+                        Previously, the site had an option that allowed users to download financial information for any
+                        company into an Excel file. However, that feature was removed, and when copying the data into an
+                        Excel spreadsheet, it pasted into a single column. <br><br>
+
+                        For this reason, I had to write a small Python script that would allow me to display the data as
+                        a table.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">3. Calculation of Financial Ratios</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-8">
+                    <p>
+                        For this phase of the project, I had an Excel workbook containing the income statement and
+                        balance sheet, and on a third sheet I created a table with the calculations for various
+                        financial ratios.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">4. Dashboard Design in Power BI</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                    <p>
+                        In Power BI, I began by designing the dashboard, customizing the color palette to match NVIDIA's
+                        and adding the company logo to make it more presentable.<br><br>
+
+                        As for the charts, I chose those that best summarized the company's information, taking into
+                        account the income statement, the balance sheet, and its financial ratios.<br><br>
+
+                        As for calculating new metrics, I only needed to calculate the negative value of the Average
+                        Payment Period so that it would appear as a negative value on the chart relative to the other
+                        values in the Cash Conversion Cycle.<br><br>
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                    <img class="object-cover object-center w-full h-full" src="../assets/images/Dashboard.png" alt="">
+                    <p class="text-sm text-center text-slate-500 italic">
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">5. Conclusions</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                    <p>
+                        In terms of liquidity, NVIDIA has sufficient funds to meet its short-term financial obligations.
+                        The company's current ratio has remained above 3 throughout the 2023-2026 analysis period. This
+                        is due to a significant increase in its current assets from 23.1MM to 125.6MM, compared with a
+                        smaller increase in its current liabilities from 6.6MM to 32.2MM.<br><br>
+
+                        The average collection and payment periods have gradually increased, but this is not reflected
+                        in the cash conversion cycle, which decreased from 162 to 117 days, indicating improvements in
+                        operational efficiency.<br><br>
+
+                        The interest coverage ratio increased dramatically from 16.96 to 547.14, as a result of a
+                        significant increase in profits from 4.4MM to 144.7MM during the period in question, which
+                        translates to an extremely high capacity to pay interest at present.<br><br>
+
+                        The net profit margin has increased from 0.16 to 0.56 during the 2023-2026 analysis period, as a
+                        result of a significant increase in revenue—from 26.9MM to 215.9MM—compared with a smaller
+                        increase in expenses—from 21.3MM to 85.5MM—which may stem from large but well-managed
+                        investments. Consequently, we can conclude that the company has become extremely profitable and
+                        scalable.<br><br>
+
+                        Return on equity (ROE) increased from 0.20 to 0.76 as a result of an improvement in the net
+                        profit margin, which rose from 0.16 to 0.56, and an increase in asset turnover from 0.65 to 1.04
+                        during the 2023-2026 period. The company's increase in ROE stems from its operational
+                        improvements, as its leverage ratio decreased from 1.86 to 1.31.
+                    </p>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="bg-slate-900 text-center py-16 px-6 mt-10">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-2xl font-bold text-white mb-6">Would you like to discuss this approach?</h3>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:tu.correo@email.com"
+                    class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+                    Contact Me
+                </a>
+                <a href="../index.html"
+                    class="bg-transparent border border-slate-400 hover:border-white text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+                    View other projects
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

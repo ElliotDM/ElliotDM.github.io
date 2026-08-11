@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af', // blue-800
+                        secondary: '#475569', // slate-600
+                        dark: '#0f172a', // slate-900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+    <header class="bg-dark text-white py-20 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div
+                class="w-48 h-48 rounded-full overflow-hidden border-4 border-primary shrink-0 bg-slate-800 flex items-center justify-center">
+                <img class="object-cover object-center w-full h-48" src="assets/images/foto.png">
+            </div>
+
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-400">Elliot</span></h1>
+                <h2 class="text-2xl text-slate-300 mb-6">Data Analyst Jr</h2>
+                <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                    I'm a computer engineer with a strong interest in <b>data analysis</b> and <b>finance</b>. I
+                    specialize in cleaning, analyzing, and visualizing data to solve real-world business problems. When
+                    I'm not writing Python scripts or designing dashboards, I'm probably playing video games, reading a
+                    novel, or cooking delicious meals.
+                </p>
+                <div class="mt-8 flex gap-4 justify-center md:justify-start">
+                    <a href="#proyectos"
+                        class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        View my projects
+                    </a>
+                    <a href="#contacto"
+                        class="bg-transparent border border-slate-400 hover:border-white text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="proyectos" class="flex-grow py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold text-center text-dark mb-4">Featured Projects</h3>
+            <div class="w-16 h-1 bg-primary mx-auto mb-12"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <article
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fa-solid fa-sliders text-5xl text-slate-400"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-3">
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">Python</span>
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">Pandas</span>
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">PowerBI</span>
+                        
+                        </div>
+                        <h4 class="text-xl font-bold text-dark mb-2">Design of a Financial Ratios Dashboard for NVIDIA</h4>
+                        <p class="text-secondary text-sm mb-4 flex-grow">
+                            I designed and executed an <b>ETL</b> pipeline in Python to extract NVIDIA financial data, transform it for analysis, and visualize key metrics in a PowerBI dashboard.
+                        </p>
+                        <a href="projects/03-NVIDIA.html"
+                            class="text-primary font-semibold hover:underline flex items-center gap-1">
+                            View case study <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fa-solid fa-chart-line text-5xl text-slate-400"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-3">
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">Python</span>
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">Pandas</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-dark mb-2">Sorting Items by Stock-Out Value for the ASOS Clothing Store</h4>
+                        <p class="text-secondary text-sm mb-4 flex-grow">
+                            I analyzed over <b>30,000</b> retail records with Python and applied a linear regression model to identify products with low inventory turnover.
+                        </p>
+                        <a href="projects/02-ASOS.html"
+                            class="text-primary font-semibold hover:underline flex items-center gap-1">
+                            View case study <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center">
+                        <i class="fa-brands fa-python text-5xl text-slate-400"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex gap-2 mb-3">
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">Python</span>
+                            <span
+                                class="text-xs font-bold uppercase text-blue-600 bg-blue-100 px-2 py-1 rounded">Pandas</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-dark mb-2">Predicting the Cost of Selling Used Cars</h4>
+                        <p class="text-secondary text-sm mb-4 flex-grow">
+                            I implemented a linear regression model to identify key price factors for used cars, achieving <b>80%</b> of accuracy.
+                        </p>
+                        <a href="projects/01-Cars.html"
+                            class="text-primary font-semibold hover:underline flex items-center gap-1">
+                            View case study <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto" class="bg-slate-900 text-slate-400 py-12 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl font-bold text-white mb-4">Shall we talk about data?</h3>
+                <p class="mb-6 max-w-md">
+                    I am available for opportunities as a Data Analyst or in other data-related roles.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fa-solid fa-envelope text-blue-400"></i>
+                        <a href="mailto:tu.correo@email.com" class="hover:text-white transition">tu.correo@email.com</a>
+                    </li>
+                    <li class="flex items-center justify-center md:justify-start gap-3">
+                        <i class="fa-solid fa-location-dot text-blue-400"></i>
+                        <span>Cuautitlán, Estado de México</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end">
+                <h4 class="text-lg font-semibold text-white mb-4">Find me on</h4>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 hover:text-white transition duration-300"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 hover:text-white transition duration-300"
+                        aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 hover:text-white transition duration-300"
+                        aria-label="Kaggle">
+                        <i class="fa-brands fa-kaggle"></i>
+                    </a>
+                </div>
+                <p class="text-sm mt-8 text-slate-500">
+                    &copy; 2026 Elliot Durán Macedo. Built for analysis.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

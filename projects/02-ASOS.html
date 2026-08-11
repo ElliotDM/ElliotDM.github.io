@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | ASOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af', // blue-800
+                        secondary: '#475569', // slate-600
+                        dark: '#0f172a', // slate-900
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+    <nav class="bg-dark text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 hover:text-blue-400 transition duration-300">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span class="font-semibold">Back to the Portfolio</span>
+            </a>
+            <div class="hidden md:flex gap-3">
+                <a href="https://github.com/ElliotDM/asos"
+                    class="text-sm bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded transition">Ver en GitHub <i
+                        class="fa-brands fa-github ml-1"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-white border-b border-slate-200 py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Python</span>
+                <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Pandas</span>
+                <span
+                    class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Seaborn</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
+                Sorting Items by Stock-Out Value for the ASOS Clothing Store
+            </h1>
+
+            <p class="text-xl text-secondary mb-8 leading-relaxed">
+                I analyzed over <b>30,000</b> retail records with Python and applied a linear regression model to
+                identify products with low inventory turnover.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-100">
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Industry</h4>
+                    <p class="font-medium">Commerce | Retail</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Tools</h4>
+                    <p class="font-medium">Jupyter</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16 px-6">
+        <article class="max-w-4xl mx-auto space-y-16">
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-crosshairs"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">1. Context and Problem Definition</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                    <p>
+                        For a project, I was presented with the case of a clothing store that was reporting significant
+                        losses in sales. My task was to analyze its data and develop recommendations for the store.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">2. Data and Its Preparation</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6">
+                    <p>
+                        The first step was to clean up the missing or duplicate data using code. Given the size of the
+                        dataset, I chose to keep only the first instance of any duplicate.<br><br>
+
+                        Next, I corrected the data types of the "price" and "color" columns, using functions in
+                        <b>Python</b>.<br><br>
+
+                        Finally, I extracted additional information from the "description" column to identify the brand
+                        referenced in each row and the phantom revenue.
+                    </p>
+                </div>
+                <div class="bg-slate-800 rounded-lg p-4 overflow-x-auto shadow-inner">
+                    <div class="flex gap-2 mb-3">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <pre><code class="text-sm text-blue-300 font-mono">
+def price_as_float(price: str):
+    pattern = r"\d+.\d+"
+    match = re.search(pattern, price)
+    return float(match.group()) if match else 0
+    
+
+def get_brand(row: str) -> str: 
+    pattern = r"by [A-Z][a-z]+ [A-Z][a-z]+|by [A-Z][a-z]+|by [A-Z]+"
+    match = re.search(pattern, row)
+
+    if match:
+        output = match.group()
+        start_pos = output.find('by')
+        return output[start_pos+3:]
+    else:
+        return "Unknown"
+                    </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">3. Exploratory Data Analysis (EDA)</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-8">
+                    <p>
+                        The first thing I wanted to find out was the number of products by brand that the store carries
+                        in its inventory, as well as the total losses by brand resulting from phantom revenue. This
+                        analysis yielded the following graph.<br>
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                    <img class="object-cover object-center w-full h-full" src="../assets/images/Lost-revenue.png">
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">4. Solution Development</h2>
+                </div>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                    <p>
+                        The next step was to calculate the average stock-out value and the average price of products
+                        sold in the store in order to classify the brands based on these two values.<br><br>
+
+                        To do this, I grouped the data in the dataset by brand and, using a scatter plot with the
+                        average stock-out and average price as axes, I was able to classify and identify the brands with
+                        lower liquidity.<br><br>
+                    </p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                    <img class="object-cover object-center w-full h-full" src="../assets/images/Cluster-of-brands.png">
+                </div>
+            </section>
+
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-primary">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-dark">5. Results and Impact</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-blue-50 border border-blue-100 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-blue-700 mb-2">$600,000</div>
+                        <div class="text-sm text-slate-600">Sales lost</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-blue-700 mb-2">33%</div>
+                        <div class="text-sm text-slate-600">Stock-Out Rate</div>
+                    </div>
+                </div>
+
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                    <p>
+                        Based on this information, it was found that a large number of products, which are sold at very
+                        high prices, have a very low stock-out rate; therefore, it is recommended to hold a clearance
+                        sale for this portion of the inventory.
+                    </p>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer class="bg-slate-900 text-center py-16 px-6 mt-10">
+        <div class="max-w-2xl mx-auto">
+            <h3 class="text-2xl font-bold text-white mb-6">Would you like to discuss this approach?</h3>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="mailto:tu.correo@email.com"
+                    class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+                    Contact Me
+                </a>
+                <a href="../index.html"
+                    class="bg-transparent border border-slate-400 hover:border-white text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
+                    View other projects
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
