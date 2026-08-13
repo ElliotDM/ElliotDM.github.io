@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e40af'/%3E%3Crect x='7' y='17' width='4.5' height='8' rx='1.5' fill='%23ffffff'/%3E%3Crect x='13.75' y='12' width='4.5' height='13' rx='1.5' fill='%23ffffff'/%3E%3Crect x='20.5' y='7' width='4.5' height='18' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
     <title>Case Study | ASOS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -31,7 +33,7 @@
             </a>
             <div class="hidden md:flex gap-3">
                 <a href="https://github.com/ElliotDM/asos"
-                    class="text-sm bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded transition">Ver en GitHub <i
+                    class="text-sm bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded transition">View on GitHub <i
                         class="fa-brands fa-github ml-1"></i></a>
             </div>
         </div>
@@ -54,6 +56,14 @@
                 I analyzed over <b>30,000</b> retail records with Python and applied a linear regression model to
                 identify products with low inventory turnover.
             </p>
+
+            <div
+                class="aspect-video w-full mb-8 rounded-xl overflow-hidden border border-slate-200 bg-slate-200 flex items-center justify-center">
+                <img src="../assets/covers/clothing_store.jpg" alt="" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="block mt-2 font-sans text-sm antialiased font-normal leading-normal text-center text-inherit">
+                Image by Pexels from Pixabay
+            </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-100">
                 <div>
@@ -93,14 +103,16 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">2. Data and Its Preparation</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6 space-y-4">
                     <p>
                         The first step was to clean up the missing or duplicate data using code. Given the size of the
-                        dataset, I chose to keep only the first instance of any duplicate.<br><br>
-
+                        dataset, I chose to keep only the first instance of any duplicate.
+                    </p>
+                    <p>
                         Next, I corrected the data types of the "price" and "color" columns, using functions in
-                        <b>Python</b>.<br><br>
-
+                        <b>Python</b>.
+                    </p>
+                    <p>
                         Finally, I extracted additional information from the "description" column to identify the brand
                         referenced in each row and the phantom revenue.
                     </p>
@@ -143,7 +155,7 @@ def get_brand(row: str) -> str:
                     <p>
                         The first thing I wanted to find out was the number of products by brand that the store carries
                         in its inventory, as well as the total losses by brand resulting from phantom revenue. This
-                        analysis yielded the following graph.<br>
+                        analysis yielded the following graph.
                     </p>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
@@ -158,14 +170,15 @@ def get_brand(row: str) -> str:
                     </div>
                     <h2 class="text-2xl font-bold text-dark">4. Solution Development</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4 mb-8">
                     <p>
                         The next step was to calculate the average stock-out value and the average price of products
-                        sold in the store in order to classify the brands based on these two values.<br><br>
-
+                        sold in the store in order to classify the brands based on these two values.
+                    </p>
+                    <p>
                         To do this, I grouped the data in the dataset by brand and, using a scatter plot with the
                         average stock-out and average price as axes, I was able to classify and identify the brands with
-                        lower liquidity.<br><br>
+                        lower liquidity.
                     </p>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
@@ -208,7 +221,7 @@ def get_brand(row: str) -> str:
         <div class="max-w-2xl mx-auto">
             <h3 class="text-2xl font-bold text-white mb-6">Would you like to discuss this approach?</h3>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:tu.correo@email.com"
+                <a href="mailto:elliotd70@outlook.com"
                     class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
                     Contact Me
                 </a>

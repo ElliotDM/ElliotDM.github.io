@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e40af'/%3E%3Crect x='7' y='17' width='4.5' height='8' rx='1.5' fill='%23ffffff'/%3E%3Crect x='13.75' y='12' width='4.5' height='13' rx='1.5' fill='%23ffffff'/%3E%3Crect x='20.5' y='7' width='4.5' height='18' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
     <title>Case Study | NVIDIA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -37,8 +39,8 @@
             <div class="flex flex-wrap gap-2 mb-6">
                 <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Python</span>
                 <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Pandas</span>
-                <span
-                    class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">PowerBI</span>
+                <span class="text-xs font-bold uppercase text-blue-800 bg-blue-100 px-3 py-1 rounded-full">Power
+                    BI</span>
             </div>
 
             <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6 leading-tight">
@@ -46,18 +48,27 @@
             </h1>
 
             <p class="text-xl text-secondary mb-8 leading-relaxed">
-                I designed and executed an <b>ETL</b> pipeline in Python to extract NVIDIA financial data, transform it for
-                analysis, and visualize key metrics in a PowerBI dashboard.
+                I designed and executed an <b>ETL</b> pipeline in Python to extract NVIDIA financial data, transform it
+                for
+                analysis, and visualize key metrics in a Power BI dashboard.
             </p>
 
-             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-100">
+            <div
+                class="aspect-video w-full mb-8 rounded-xl overflow-hidden border border-slate-200 bg-slate-200 flex items-center justify-center">
+                <img src="../assets/covers/nvidia.jpg" alt="" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="block mt-2 font-sans text-sm antialiased font-normal leading-normal text-center text-inherit">
+                Image by Jacek Abramowicz from Pixabay
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-100">
                 <div>
                     <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Industry</h4>
                     <p class="font-medium">Finance</p>
                 </div>
                 <div>
                     <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Tools</h4>
-                    <p class="font-medium">PowerBI </p>
+                    <p class="font-medium">Power BI</p>
                 </div>
             </div>
         </div>
@@ -73,13 +84,13 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">1. Context and Problem Definition</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4">
                     <p>
                         NVIDIA Corporation is a software and fabless technology company that develops graphics
                         processing units, application programming interfaces for data science and high-performance
                         computing, as well as system-on-a-chip solutions for mobile computing and the automotive market.
-                        <br><br>
-
+                    </p>
+                    <p>
                         In this project, I will answer the following questions: How is the company performing in terms
                         of liquidity and profitability? How is its cash conversion cycle? How is the company performing
                         in terms of its interest coverage ratio? Finally, I will analyze their return on equity (ROE)
@@ -95,15 +106,17 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">2. Data and Its Preparation</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6 space-y-4">
                     <p>
                         The data was obtained from Yahoo Finance, a website that offers a vast amount of finance
-                        data.<br><br>
-
+                        data.
+                    </p>
+                    <p>
                         Previously, the site had an option that allowed users to download financial information for any
                         company into an Excel file. However, that feature was removed, and when copying the data into an
-                        Excel spreadsheet, it pasted into a single column. <br><br>
-
+                        Excel spreadsheet, it pasted into a single column.
+                    </p>
+                    <p>
                         For this reason, I had to write a small Python script that would allow me to display the data as
                         a table.
                     </p>
@@ -133,17 +146,19 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">4. Dashboard Design in Power BI</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4 mb-8">
                     <p>
                         In Power BI, I began by designing the dashboard, customizing the color palette to match NVIDIA's
-                        and adding the company logo to make it more presentable.<br><br>
-
+                        and adding the company logo to make it more presentable.
+                    </p>
+                    <p>
                         As for the charts, I chose those that best summarized the company's information, taking into
-                        account the income statement, the balance sheet, and its financial ratios.<br><br>
-
+                        account the income statement, the balance sheet, and its financial ratios.
+                    </p>
+                    <p>
                         As for calculating new metrics, I only needed to calculate the negative value of the Average
                         Payment Period so that it would appear as a negative value on the chart relative to the other
-                        values in the Cash Conversion Cycle.<br><br>
+                        values in the Cash Conversion Cycle.
                     </p>
                 </div>
                 <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
@@ -160,27 +175,31 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">5. Conclusions</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4">
                     <p>
                         In terms of liquidity, NVIDIA has sufficient funds to meet its short-term financial obligations.
                         The company's current ratio has remained above 3 throughout the 2023-2026 analysis period. This
                         is due to a significant increase in its current assets from 23.1MM to 125.6MM, compared with a
-                        smaller increase in its current liabilities from 6.6MM to 32.2MM.<br><br>
-
+                        smaller increase in its current liabilities from 6.6MM to 32.2MM.
+                    </p>
+                    <p>
                         The average collection and payment periods have gradually increased, but this is not reflected
                         in the cash conversion cycle, which decreased from 162 to 117 days, indicating improvements in
-                        operational efficiency.<br><br>
-
+                        operational efficiency.
+                    </p>
+                    <p>
                         The interest coverage ratio increased dramatically from 16.96 to 547.14, as a result of a
                         significant increase in profits from 4.4MM to 144.7MM during the period in question, which
-                        translates to an extremely high capacity to pay interest at present.<br><br>
-
+                        translates to an extremely high capacity to pay interest at present.
+                    </p>
+                    <p>
                         The net profit margin has increased from 0.16 to 0.56 during the 2023-2026 analysis period, as a
                         result of a significant increase in revenue—from 26.9MM to 215.9MM—compared with a smaller
                         increase in expenses—from 21.3MM to 85.5MM—which may stem from large but well-managed
                         investments. Consequently, we can conclude that the company has become extremely profitable and
-                        scalable.<br><br>
-
+                        scalable.
+                    </p>
+                    <p>
                         Return on equity (ROE) increased from 0.20 to 0.76 as a result of an improvement in the net
                         profit margin, which rose from 0.16 to 0.56, and an increase in asset turnover from 0.65 to 1.04
                         during the 2023-2026 period. The company's increase in ROE stems from its operational
@@ -196,7 +215,7 @@
         <div class="max-w-2xl mx-auto">
             <h3 class="text-2xl font-bold text-white mb-6">Would you like to discuss this approach?</h3>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:tu.correo@email.com"
+                <a href="mailto:elliotd70@outlook.com"
                     class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
                     Contact Me
                 </a>

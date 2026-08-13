@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e40af'/%3E%3Crect x='7' y='17' width='4.5' height='8' rx='1.5' fill='%23ffffff'/%3E%3Crect x='13.75' y='12' width='4.5' height='13' rx='1.5' fill='%23ffffff'/%3E%3Crect x='20.5' y='7' width='4.5' height='18' rx='1.5' fill='%23ffffff'/%3E%3C/svg%3E">
     <title>Case Study | Cars</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -31,7 +33,7 @@
             </a>
             <div class="hidden md:flex gap-3">
                 <a href="https://github.com/ElliotDM/autos"
-                    class="text-sm bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded transition">Ver en GitHub <i
+                    class="text-sm bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded transition">View on GitHub <i
                         class="fa-brands fa-github ml-1"></i></a>
             </div>
         </div>
@@ -54,8 +56,16 @@
 
             <p class="text-xl text-secondary mb-8 leading-relaxed">
                 I implemented a linear regression model to identify key price factors for used cars, achieving
-                <b>80%</b> of accuracy.
+                <b>80%</b> accuracy.
             </p>
+
+            <div
+                class="aspect-video w-full mb-8 rounded-xl overflow-hidden border border-slate-200 bg-slate-200 flex items-center justify-center">
+                <img src="../assets/covers/used_cars.jpg" alt="" class="w-full h-full object-cover object-center">
+            </div>
+            <div class="block mt-2 font-sans text-sm antialiased font-normal leading-normal text-center text-inherit">
+                Image by Ryan McGuire from Pixabay
+            </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-100">
                 <div>
@@ -80,14 +90,14 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">1. Context and Problem Definition</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4">
                     <p>
                         Can we estimate the price of a used car based on its features?
-
+                    </p>
+                    <p>
                         Let's say we want to sell a used car, but we want to set a reasonable price so that someone will
                         want to buy it. To do this, we need to ask ourselves which features affect the selling price:
                         the color? The make? The mileage?
-
                     </p>
                 </div>
             </section>
@@ -99,22 +109,24 @@
                     </div>
                     <h2 class="text-2xl font-bold text-dark">2. Data and Its Preparation</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed mb-6 space-y-4">
                     <p>
                         The data was obtained from the "Applied Data Science with Python" certification course offered
-                        by IBM.<br><br>
-
+                        by IBM.
+                    </p>
+                    <p>
                         The first challenge in cleaning the dataset was that it did not include headers, so it was
-                        necessary to add them using code.<br><br>
-
+                        necessary to add them using code.
+                    </p>
+                    <p>
                         The next step was to replace the “?” symbol with the value NaN to identify missing data. The
                         treatment applied to null values was to replace them with their mean or frequency. Only when the
-                        car price was missing the entire row was removed.<br><br>
-
+                        car price was missing the entire row was removed.
+                    </p>
+                    <p>
                         Additionally, some data types were corrected, columns expressed in miles per hour were
                         standardized, measurement columns were normalized, and dummy variables were created for fuel
                         type and induction.
-
                     </p>
                 </div>
                 <div class="bg-slate-800 rounded-lg p-4 overflow-x-auto shadow-inner">
@@ -163,7 +175,8 @@ df = pd.concat([df, dummy_variable_1], axis=1)
                             and $45,000.
                         </li>
                         <li> Second, hardtop cars with rear-wheel drive sell for a higher price, approximately $24,000.
-                            Meanwhile, hatchback cars all-wheel drive sell for a very low price, approximately $7,600.
+                            Meanwhile, hatchback cars with all-wheel drive sell for a very low price, approximately
+                            $7,600.
                         </li>
                         <li> Third, there is a strong correlation between cylinder bore and the total horsepower a car
                             can produce.
@@ -199,13 +212,13 @@ df = pd.concat([df, dummy_variable_1], axis=1)
                     </div>
                     <h2 class="text-2xl font-bold text-dark">4. Solution Development</h2>
                 </div>
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4">
                     <p>
-
                         Given the simplicity of the dataset, basic machine learning models were used for this project.
                         The following algorithms were tested: simple linear regression (SLR), multiple linear regression
-                        (MLR), and polynomial fitting (polyfit).<br><br>
-
+                        (MLR), and polynomial fitting (polyfit).
+                    </p>
+                    <p>
                         Based on the findings from the EDA, I chose to use the variables horsepower, curb weight,
                         engine size, and highway mpg to predict a car's final price.
                     </p>
@@ -220,22 +233,23 @@ df = pd.concat([df, dummy_variable_1], axis=1)
                     <h2 class="text-2xl font-bold text-dark">5. Results and Impact</h2>
                 </div>
 
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4 mb-8">
                     <p>
                         After evaluating each model, it was determined that the MLR model offered the best performance,
-                        with 80% of accuracy.<br><br>
-
+                        with 80% accuracy.
+                    </p>
+                    <p>
                         The next step was to train the model so that the predictions would more closely match the actual
-                        values in the dataset.<br><br>
+                        values in the dataset.
                     </p>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm ">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm mb-8">
                     <img class="object-cover object-center w-full h-full" src="../assets/images/model_evaluation.png">
                 </div>
 
-                <div class="prose prose-slate max-w-none text-secondary leading-relaxed">
-                    <p><br><br>
+                <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4">
+                    <p>
                         The estimated value is higher than the actual value for cars priced around $10,000; conversely,
                         the estimated price is lower than the actual cost in the $30,000 to $40,000 range. Therefore,
                         the model is not as accurate in these ranges.
@@ -250,7 +264,7 @@ df = pd.concat([df, dummy_variable_1], axis=1)
         <div class="max-w-2xl mx-auto">
             <h3 class="text-2xl font-bold text-white mb-6">Would you like to discuss this approach?</h3>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:tu.correo@email.com"
+                <a href="mailto:elliotd70@outlook.com"
                     class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-8 rounded-lg transition duration-300">
                     Contact Me
                 </a>
